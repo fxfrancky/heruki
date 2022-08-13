@@ -14,6 +14,7 @@
   --input-border-color: hsl(214, 18%, 75%);
   --success-color: hsl(120, 39%, 54%);
   --error-color: #d9534f;
+  --instagram-color: hsl(300, 100%, 50%);
 
   --ff-primary: "Lato", sans-serif;
   --ff-secondary: "Staatliches", cursive;
@@ -328,4 +329,20 @@ img {
 .hidden {
   visibility: hidden;
   height: 0;
+}
+
+.footer .container .social a:hover:first-child i {
+  color: black;
+}
+
+.footer .container .social a:hover:nth-child(2) i {
+  color: var(--primary-color);
+}
+
+.footer .container .social a:hover:nth-child(3) i {
+  color: var(--instagram-color);
+}
+
+.footer .container .social a:hover:nth-child(4) i {
+  color: var(--primary-color);
 }
