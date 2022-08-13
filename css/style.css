@@ -1,0 +1,140 @@
+/* ShowCase Styling */
+.showcase {
+  background-color: var(--primary-color);
+  height: 400px;
+  color: var(--neutral-color-50);
+  /* Ceci permet de position un composant absolute au dessus du showcase */
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 42%;
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  animation: slideInFromRight 1s ease-in;
+}
+
+/* Styling input elements */
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid var(--input-border-color);
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+/* Ajouter la ligne oblique derriere notre forme */
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 150px;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  /* Afficher ligne oblique et la colorer en blanck */
+  background-color: white;
+  transform: skewY(-2.7deg);
+  /* Assurer la compatibilite avec les autres navigateur */
+  /* chrome et safari*/
+  -webkit-transform: skewY(-2.7deg);
+  /* mozilla firefox */
+  -moz-transform: skewY(-2.7deg);
+  /* internet explorer (microsoft) */
+  -ms-transform: skewY(-2.7deg);
+}
+
+.stats {
+  padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+  margin: 1rem 0;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: var(--fw-400);
+  margin: 2rem 0;
+}
+
+/* Styling CLI */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Styling Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Styling Languages */
+.languages .flex {
+  /* to make it more responsive */
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.25s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  /* card effect on hover */
+  transform: translateY(-15px);
+}
+
+/* FOOTER */
+
+.footer .social a {
+  margin: 0 10px;
+}
